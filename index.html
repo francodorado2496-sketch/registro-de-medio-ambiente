@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Medio Ambiente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Registro sobre el Medio Ambiente</h1>
+
+        <nav>
+            <h3>Ir a la sección:</h3>
+            <a href="#env1">1. Calidad del Aire</a>
+            <a href="#env2">2. Niveles de Ruido</a>
+            <a href="#env3">3. Focos de Calor <a>
+            <a href="#env4">4. Tipo de Residuo </a>
+            <a href="#env5">5. Nivel del Río</a>
+        </nav>
+        <hr>
+
+        <div id="env1">
+            <h2>1. Clasificación de Calidad del Aire (AQI)</h2>
+            <p>Ingresa el valor AQI (Calidad del Aire):</p>
+            <input type="number" id="env1-aqi" placeholder="ingrese un valor">
+            <button onclick="ambiente1()">Clasificar</button>
+            <p><strong>Resultado:</strong> <span id="env1-resultado"></span></p>
+        </div>
+        <hr>
+
+        <div id="env2">
+            <h2>2. Nivel de Ruido</h2>
+            <p>Ingrese los decibelios (dB), separadas por comas:</p>
+            <input type="text" id="env2-niveles" placeholder="ej. 65, 72, 58, 80">
+            <button onclick="ambiente2()">Calcular Promedio</button>
+            <p><strong>Resultado:</strong> <span id="env2-resultado"></span></p>
+        </div>
+        <hr>
+
+        <div id="env3">
+            <h2>3. Focos de Calor</h2>
+            <p>Ingresa una temperatura en (°C) o escribe 0 para terminar y contar.</p>
+            <input type="number" id="env3-temp" placeholder="ingrese las temperaturas">
+            <button onclick="ambiente3()">Agregar / Contar</button>
+            <p>Temperaturas agregadas: <span id="env3-lista"Ninguna</span></p>
+            <p><strong>Resultado:</strong> <span id="env3-resultado"></span></p>
+        </div>
+        <hr>
+
+        <div id="env4">
+            <h2>4. Clasificación de Tipo de Residuo</h2>
+            <p>Ingresa un código (1-4):</p>
+            <input type="number" id="env4-codigo" placeholder="1-4">
+            <button onclick="ambiente4()">Identificar</button>
+            <p><strong>Resultado:</strong> <span id="env4-resultado"></span></p>
+        </div>
+        <hr>
+
+        <div id="env5">
+            <h2>5. Monitoreo de Niveles del Río</h2>
+            <p>Ingresa los niveles (en metros) o escriba "no" para terminar.</p>
+            <input type="text" id="env5-nivel" placeholder="e.j. 2.5 o 'no'">
+            <button onclick="ambiente5()">Registrar / Finalizar</button>
+            <p>Registrado: <span id="env5-feedback"></span></p>
+            <p><strong>Resultado:</strong> <span id="env5-resultado"></span></p>
+        </div>
+
+    </div> <script src="script.js"></script>
+
+</body>
+</html>
